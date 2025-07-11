@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <main class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
+
+                <section class="card shadow-sm">
+                    <header style="background-color: #1e4f3d;" class="card-header text-white text-center">
+                        <h1>To-Do List Aldi</h1>
+                    </header>
+                    <div class="card-body">
+                        <section aria-labelledby="form-heading">
+                            <h2 id="form-heading" class="visually-hidden">Form Tambah Aktivitas</h2>
+                            <div class="mb-3 d-flex flex-wrap align-items-center">
+                                <input type="text" class="form-control me-2 mb-2" id="todoInput" placeholder="Tambahkan aktivitas...">
+                                <input type="date" class="form-control mb-2" id="dateInput" style="min-width: 150px;">
+                                <button class="btn btn-outline-info btn-sm mb-2 me-2" id="btnHariIni">Hari Ini</button>
+                                <button class="btn btn-outline-info btn-sm mb-2 me-2" id="btnBesok">Besok</button>
+                                <button class="btn btn-primary mb-2" id="addTodoBtn">+</button>
+                            </div>
+                        </section>
+                        
+                        <section aria-label="Kontrol Daftar" class="mb-3">
+                            <div class="dropdown d-inline-block">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="filterDropdownBtn" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Filter: Semua
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="filterDropdownBtn" id="filterOptions">
+                                    <li><a class="dropdown-item" href="#" data-filter="semua">Tampilkan Semua</a></li>
+                                    <li><a class="dropdown-item" href="#" data-filter="selesai">Tampilkan Selesai</a></li>
+                                    <li><a class="dropdown-item" href="#" data-filter="belum">Tampilkan Belum Selesai</a></li>
+                                </ul>
+                            </div>
+                            <button class="btn btn-danger" id="deleteAllBtn">Hapus Semua</button>
+                        </section>
+
+                        <section aria-labelledby="list-heading">
+                            <h2 id="list-heading" class="visually-hidden">Daftar Aktivitas</h2>
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Aktivitas</th>
+                                        <th>Tanggal Input</th>
+                                        <th>Status</th>
+                                        <th>Aksi</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="todoList">
+                                </tbody>
+                            </table>
+                            <p id="emptyList" class="text-center text-muted">Belum ada aktivitas.</p>
+                        </section>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-center py-4 mt-auto">
+        <p class="mb-0">&copy; Terima Kasih RevoU</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
